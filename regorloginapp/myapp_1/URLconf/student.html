@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ 
+<html> 
+
+   <body> 
+
+     
+
+      <form name = "form" action = "{% url "myapp_1.views.student" %}" method = "POST" >{% csrf_token %}
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;" placeholder = "Identifiant" name = "username" /> 
+            </center>
+         </div>
+
+         <p>Name <input type = "text" name = "Name" /></p> 
+
+         <p> /></p> 
+         <p>Age <input type = "text" name = "Age" /></p> 
+         <p> /></p> 
+         <p>Occupation <input type ="text" name = "Occupation" /></p> 
+         <p> /></p> 
+         <p><input type = "submit" value = "submit" /></p> 
+
+         <p> /></p> 
+         <form class="form-signin">
+
+         <div style = "max-width:470px;">
+            <center>
+               <label for="inputPurchasePrice" class="sr-only">Purchase Price</label>
+               <input type="purchaseprice" name="inputPurchasePrice" id="inputPurchasePrice" class="form-control" placeholder="Purchase Price" required autofocus>
+            </center>  
+         </div>
+    
+         <label for="inputDepositPaid" class="sr-only">DepositPaid</label>
+         <input type="depositpaid" name="inputDepositPaid" id="inputDepositPaid" class="form-control" placeholder="Deposit Paid" required autofocus>
+         <label for="inputBondTerm" class="sr-only">BondTerm</label>
+         <input type="bondterm" name="inputBondTerm" id="inputBondTerm" class="form-control" placeholder="Bond Term" required autofocus>
+         <label for="inputFixedInterestRate" class="sr-only">FixedInterestRate</label>
+         <input type="fixedinterestrate" name="inputFixedInterestRate" id="inputFixedInterestRate" class="form-control" placeholder="Fixed Interest Rate" required>
+         <p> /></p>
+ 
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%; height:35px; width:80%;margin-left:19%;" type = "submit" value = "student" >
+                  <strong>student</strong>
+               </button>
+            </center>
+         </div>
+         <p><input type = "submit" value = "submit" /></p>          
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+      </form>
+      </div>
+
+      
+
+   </body> 
+
+</html>

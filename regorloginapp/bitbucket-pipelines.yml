@@ -1,0 +1,24 @@
+# This is a sample build configuration for Python.
+# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: python:3.7.3
+clone:
+ depth: full
+pipelines:
+  default:
+    - step:
+        caches:
+          - pip
+        script: # Modify the commands below to build your repository.
+          - pip install -r requirements.txt
+          - git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD
+          - pipe: atlassian/heroku-deploy:1.1.1
+            variables:
+              HEROKU_API_KEY: '7366d89b-0a53-4689-8fc6-19522ba395b2'
+              HEROKU_APP_NAME: 'regorloginapp'
+              ZIP_FILE: 'Yangode-regapp-deployment-2feddf349f2d.zip'
+
+
+#Yangode-regapp-deployment-2feddf349f2d

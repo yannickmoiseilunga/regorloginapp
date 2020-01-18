@@ -1,0 +1,66 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+   <body>
+      <form name = "Addnumform" action = "result" Addnum.id method = "POST" >{% csrf_token %}
+         <form class="form-signin">
+         <div style = "max-width:470px;">
+            <p>Name <input type = "text" name = "Name" /></p> 
+         </div>
+         <p> </p>
+         <div style = "max-width:470px;"></div>          
+            <p>Age <input type = "text" name = "Age" /></p>
+         </div>          
+         <p> </p>
+ 
+         <div style = "max-width:470px;"></div> 
+            <p>Occupation <input type ="text" name = "Occupation" /></p> 
+         </div> 
+         <p> </p> 
+         <p> </p> 
+
+
+         <div style = "max-width:470px;">
+            <label for="Purchase_Price" class="sr-only">Purchase_Price</label>
+            <input type="Purchase_Price" name="Purchase_Price" id="Purchase_Price" class="form-control" placeholder="Purchase_Price" required autofocus>
+             
+         </div>
+         <p> </p> 
+         <p> </p>
+         <div style = "max-width:470px;">
+            <label for="Deposit_Paid" class="sr-only">Deposit_Paid</label>
+            <input type="Deposit_Paid" name="Deposit_Paid" id="Deposit_Paid" class="form-control" placeholder="Deposit_Paid" required autofocus>
+              
+         </div>
+         <p> </p> 
+         <p> </p>
+         <div style = "max-width:470px;">
+         
+            <label for="Bond_Term" class="sr-only">Bond_Term</label>
+            <input type="Bond_Term" name="Bond_Term" id="Bond_Term" class="form-control" placeholder="Bond_Term" required autofocus>
+              
+         </div>
+         <p> </p> 
+         <p> </p>
+         <div style = "max-width:470px;">
+                        
+            <label for="inputFixed_Interest_Rate" class="sr-only">Fixed_Interest_Rate</label>
+            <input type="Fixed_Interest_Rate" name="Fixed_Interest_Rate" id="Fixed_Interest_Rate" class="form-control" placeholder="Fixed_Interest_Rate" required>
+         <p> </p>
+              
+         </div>
+         <p> </p> 
+         <p> </p>
+         <div style = "max-width:470px;">
+         
+            <p><button style = "border:0px; background-color:#4285F4; margin-top:8%; height:35px; width:80%;margin-left:19%;" input type = "submit" value = "submit" button id="btnSignUp" class="btn btn-lg btn-primary btn-block"  href="student">
+               <strong>submit</strong> </p>
+            </button>
+            
+         </div>
+         
+      </form>
+       
+
+   </body> 
+
+{% endblock %}
