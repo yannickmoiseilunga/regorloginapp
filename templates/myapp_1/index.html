@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+  <h1 class="text-center mb-3"> Mortgage Calculator </h1>
+  <head>
+    <meta charset="utf-8">
+    <title>Python Flask Mortgage Calculator</title>
+    
+  </head>
+   
+  <body>   
+    <div class="container">
+      <div class="header">
+        <nav>
+        </nav>
+          <h3 class="text-muted">Python Django App</h3>
+      </div>
+   
+      <div class="jumbotron">
+        <h5>This application is used to determine the monthly repayments based on the Home Loan amount, chosen term and Purchase price</h5>
+        <p class="lead">{{ Addnum.Purchase_Price }}</p>
+<!--         <li><a href="{% url 'student' Addnum.id %}">Get estimate</a></li> -->
+<!--         <li><a href="{% url 'student' Addnum.id %}">{{ Addnum.Purchase_Price }}</a></li> -->
+        </p>
+      </div>
+   
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Previous Mortgage quotes</h4>
+          <h5>Bucket List</h5>
+          {% if latest_entry_list %}
+            {% for question in latest_entry_list %}
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p class="lead">{{ Addnum.Purchase_Price }}</p>
+<!--                   <a href="{% url 'student' Addnum.id %}" class="btn btn-primary btn-sm">Get estimate</a> -->
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p> No quotes </p>
+          {% endif %}
+                  
+        </div>
+      </div>
+   
+
+   
+    </div>
+
+</body>
+
+
+<footer class="footer">
+  <p>&copy; Company 2019</p>
+</footer>
+
+{% endblock %}
+
+
