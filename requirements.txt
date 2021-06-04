@@ -1,5 +1,5 @@
 certifi==2019.9.11
-Django==2.2.9
+Django==2.2.21
 django-markdown-deux==1.0.5
 markdown2==2.3.8
 mysql==0.0.2
